@@ -30,8 +30,6 @@
 #include <fstream>
 #include <string>
 
-#include "PadVeriFone.cpp"
-
 class PadVeriFone 
 {
 

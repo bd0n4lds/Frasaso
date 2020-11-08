@@ -30,8 +30,6 @@
 #include <fstream>
 #include <string>
 
-#include "PadRBA.cpp"
-
 class PadRBA 
 {
 

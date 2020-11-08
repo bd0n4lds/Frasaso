@@ -31,13 +31,19 @@
 /// 
 /// </summary>
 
-Util::Util() {}
+Util::Util() 
+{
+
+}
 
 /// <summary>
 /// 
 /// </summary>
 
-Util::~Util() {}
+Util::~Util() 
+{
+
+}
 
 /// <summary>
 /// 
@@ -97,7 +103,7 @@ bool  Util::isNumber(char ch)
 /// <param name="ch"></param>
 /// <returns></returns>
 
-bool Util::isSpecial(char ch)
+bool Util::isSpecial(const char ch)
 {
     bool special = false;
 
@@ -115,11 +121,49 @@ bool Util::isSpecial(char ch)
 /// <summary>
 /// 
 /// </summary>
+/// <param name="c"></param>
+/// <returns></returns>
+
+bool  Util::isCRLF(const char ch)
+{
+    return (ch == '\n');
+}
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name="ch"></param>
+/// <returns></returns>
+
+bool Util::isTab(const char ch)
+{
+    return (ch == '\t');
+}
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name="ch"></param>
+/// <returns></returns>
+
+bool Util::isTerminator(const char ch)
+{
+    return (isSeparator(ch) || (ch == '\n') || (ch == '\r'));
+}
+
+bool Util::isSeparator(const char ch)
+{
+    return (ch == m_separator);
+}
+
+/// <summary>
+/// 
+/// </summary>
 /// <param name="st"></param>
 /// <returns></returns>
 
-std::string& Util::toLower(std::string& st)
+std::string& Util::toLower(std::string& str)
 {
-    std::transform(st.begin(), st.end(), st.begin(), tolower);
-    return st;
+    std::transform(str.begin(), str.end(), str.begin(), tolower);
+    return str;
 }

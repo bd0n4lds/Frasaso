@@ -32,8 +32,6 @@
 #include <set>
 #include <map>
 
-#include "Util.cpp"
-
 class Util 
 {
 
@@ -41,14 +39,20 @@ public:
 	Util();
 	~Util();
 
-	void trim(std::string &str);
-	bool isWhitespace(char ch);
-	bool isAlpha(char ch);
-	bool isNumber(char ch);
-	bool isSpecial(char ch);
-	std::string& toLower(std::string& st);
-
 private:
+
+	char m_separator;
+
+	void trim(std::string& str);
+	bool isAlpha(const char ch);
+	bool isCRLF(const char ch);
+	bool isNumber(const char ch);
+	bool isSpecial(const char ch);
+	bool isTab(const char ch);
+	bool isTerminator(const char ch);
+	bool isSeparator(const char ch);
+	bool isWhitespace(const char ch);
+	std::string& toLower(std::string& str);
 
 };
 #endif // UTIL_HPP

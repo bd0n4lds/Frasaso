@@ -30,8 +30,6 @@
 #include <fstream>
 #include <string>
 
-#include "PadEquinox.cpp"
-
 class PadEquinox 
 {
 

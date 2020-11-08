@@ -30,8 +30,6 @@
 #include <fstream>
 #include <string>
 
-#include "PadPax.cpp"
-
 class PadPax 
 {
 

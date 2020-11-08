@@ -24,25 +24,41 @@
 
 #include "cxxopts.hpp"
 
+cxxopts::ParseResult parse_options(cxxopts::Options& options, int& argc, char* argv[]) 
+{
+    options.add_options()
+        ("-d, --debug", "Enable debugging", cxxopts::value<bool>()->default_value("false"))
+        ("-o, --output", "Output file", cxxopts::value<std::string>()->default_value("output.txt")->implicit_value("b.def"), "BIN")
+        ("-p, --pinpad", "PINpad")
+        ("-f, --file", "File", cxxopts::value<std::vector<std::string>>(), "FILE")
+        ("-h, --help", "-?")
+        ("-v, --version", "--show-version");
+
+    options.custom_help("[-h] [-d] [-f FILE]");
+
+    try 
+    {
+        cxxopts::ParseResult options_result = options.parse(argc, argv);
+
+        if (options_result.count("help"))
+        {
+            std::cout << options.help() << std::endl;
+            exit(0);
+        }
+
+        return options_result;
+    }
+    catch (const std::exception& e) 
+    {
+        std::cerr << e.what() << std::endl;
+        exit(1);
+    }
+}
+
 int main(int argc, char* argv[])
 {
-
-    cxxopts::Options options("test", "A brief description");
-
-    options.add_options()
-        ("b,bar", "Param bar", cxxopts::value<std::string>())
-        ("d,debug", "Enable debugging", cxxopts::value<bool>()->default_value("false"))
-        ("f,foo", "Param foo", cxxopts::value<int>()->default_value("10"))
-        ("h,help", "Print usage");
-
-    auto result = options.parse(argc, argv);
-
-    if (result.count("help"))
-    {
-        std::cout << options.help() << std::endl;
-        exit(0);
-    }
+    cxxopts::Options options(argv[0], "");
+    cxxopts::ParseResult options_result = parse_options(options, argc, argv);
 
     return 0;
-
 }
