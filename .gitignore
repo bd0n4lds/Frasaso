@@ -56,3 +56,4 @@ settings.json
 secretnotes.md
 imports/lib/
 public/fonts/
+/cmake-build-debug/

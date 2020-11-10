@@ -1,2 +1,15 @@
-﻿  main.cpp
+﻿  HostChase.cpp
+  HostFDMS.cpp
+  HostGlobal.cpp
+  HostMoneris.cpp
+  HostTD.cpp
+  main.cpp
+  PadEquinox.cpp
+  PadPax.cpp
+  PadRBA.cpp
+  PadRemote.cpp
+  PadVeriFone.cpp
+  Parser.cpp
+  Util.cpp
+  Generating Code...
   Frasaso.vcxproj -> C:\Users\bd90809\source\Frasaso\Debug\Frasaso.exe
