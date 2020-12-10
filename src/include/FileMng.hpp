@@ -1,5 +1,5 @@
 /**
- * @file Parser.hpp
+ * @file FileMng.hpp
  * @author Brian Donaldson <vuejs@johndoe.anonaddy.com>
  * @version 1.0.2020-10-01
  *
@@ -22,27 +22,33 @@
 
 #pragma once
 
-#ifndef PARSER_HPP
-#define PARSER_HPP
+#ifndef FILEMNG_HPP
+#define FILEMNG_HPP
 
 #include <fstream>
 #include <iostream>
 #include <string>
 #include <vector>
 
-class Parser 
-{
+class FileMng {
 
 public:
-  Parser();
-  ~Parser();
-  bool isFileLoaded();
-  bool reparse();
-  void openDb(const std::string &filename);
-  void parsFile();
+  FileMng();
+  ~FileMng();
+  int32_t getFileSize() const;
+  int32_t readFile(const std::string &filename, std::string *contents);
+  int32_t writeFile(const std::string &filename, const std::string &contents);
+  int isFileExists(char *FileName);
+  int addSufixToFileName(char *FileName, char *sufix);
+  int renameFile(char *oldName, char *newName);
+  int moveToPosFromBegin(FILE *hf, long lMove);
+  char *makeFileName(char *FullFileName, char *DirName, char *FileName,
+                     char *ext);
+  char *getExtension(char *fileName, char *ext);
+  FILE *openFile(char *FileName, int mode);
+  int closeFile(FILE* hf);
 
 private:
-  bool m_isFileLoaded;
-  bool parseFile();
+
 };
-#endif // PARSER_HPP
+#endif // FILEMNG_HPP
