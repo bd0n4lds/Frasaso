@@ -22,8 +22,8 @@
 
 #pragma once
 
-#ifndef PAD_VERIFONE_HPP
-#define PAD_VERIFONE_HPP
+#ifndef PAD_VERIFONE_H_
+#define PAD_VERIFONE_H_
 
 #include <iostream>
 #include <vector>
@@ -40,4 +40,4 @@ public:
 private:
 
 };
-#endif // DPAD_VERIFONE_HPP
+#endif // PAD_VERIFONE_H_

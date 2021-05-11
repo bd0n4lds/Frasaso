@@ -22,8 +22,8 @@
 
 #pragma once
 
-#ifndef HOST_TD_HPP
-#define HOST_TD_HPP
+#ifndef HOST_TD_H_
+#define HOST_TD_H_
 
 #include <iostream>
 #include <vector>
@@ -40,6 +40,6 @@ public:
 private:
 
 };
-#endif // HOST_TD_HPP
+#endif // HOST_TD_H_
 
 

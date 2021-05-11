@@ -22,8 +22,8 @@
 
 #pragma once
 
-#ifndef PAD_EQUINOX_HPP
-#define PAD_EQUINOX_HPP
+#ifndef PAD_EQUINOX_H_
+#define PAD_EQUINOX_H_
 
 #include <iostream>
 #include <vector>
@@ -40,4 +40,4 @@ public:
 private:
 
 };
-#endif // PAD_EQUINOX_HPP
+#endif // PAD_EQUINOX_H_

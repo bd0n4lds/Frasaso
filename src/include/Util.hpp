@@ -22,8 +22,8 @@
 
 #pragma once
 
-#ifndef UTIL_HPP
-#define UTIL_HPP
+#ifndef UTIL_H_
+#define UTIL_H_
 
 #include <string>
 #include <algorithm>
@@ -55,4 +55,4 @@ private:
 	std::string& toLower(std::string& str);
 
 };
-#endif // UTIL_HPP
+#endif // UTIL_H_

@@ -22,8 +22,8 @@
 
 #pragma once
 
-#ifndef PARSER_HPP
-#define PARSER_HPP
+#ifndef PARSER_H_
+#define PARSER_H_
 
 #include <fstream>
 #include <iostream>
@@ -45,4 +45,4 @@ private:
   bool m_isFileLoaded;
   bool parseFile();
 };
-#endif // PARSER_HPP
+#endif // PARSER_H_

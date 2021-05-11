@@ -22,8 +22,8 @@
 
 #pragma once
 
-#ifndef PAD_RBA_HPP
-#define PAD_RBA_HPP
+#ifndef PAD_RBA_H_
+#define PAD_RBA_H_
 
 #include <iostream>
 #include <vector>
@@ -40,4 +40,4 @@ public:
 private:
 
 };
-#endif // PAD_RBA_HPP
+#endif // PAD_RBA_H_

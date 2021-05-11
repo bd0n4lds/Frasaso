@@ -22,8 +22,8 @@
 
 #pragma once
 
-#ifndef HOST_CHASE_HPP
-#define HOST_CHASE_HPP
+#ifndef HOST_CHASE_H_
+#define HOST_CHASE_H_
 
 #include <iostream>
 #include <vector>
@@ -40,5 +40,5 @@ public:
 private:
 
 };
-#endif // HOST_CHASE_HPP
+#endif // HOST_CHASE_H_
 

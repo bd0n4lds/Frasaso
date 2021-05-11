@@ -22,8 +22,8 @@
 
 #pragma once
 
-#ifndef PAD_REMOTE_HPP
-#define PAD_REMOTE_HPP
+#ifndef PAD_REMOTE_H_
+#define PAD_REMOTE_H_
 
 #include <iostream>
 #include <vector>
@@ -40,4 +40,4 @@ public:
 private:
 
 };
-#endif // PAD_REMOTE_HPP
+#endif // PAD_REMOTE_H_

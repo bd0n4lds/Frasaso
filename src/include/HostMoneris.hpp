@@ -22,8 +22,8 @@
 
 #pragma once
 
-#ifndef HOST_MONERIS_HPP
-#define HOST_MONERIS_HPP
+#ifndef HOST_MONERIS_H_
+#define HOST_MONERIS_H_
 
 #include <iostream>
 #include <vector>
@@ -40,5 +40,5 @@ public:
 private:
 
 };
-#endif // HOST_MONERIS_HPP
+#endif // HOST_MONERIS_H_
 

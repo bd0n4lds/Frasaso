@@ -22,8 +22,8 @@
 
 #pragma once
 
-#ifndef HOST_FDMS_HPP
-#define HOST_FDMS_HPP
+#ifndef HOST_FDMS_H_
+#define HOST_FDMS_H_
 
 #include <iostream>
 #include <vector>
@@ -40,6 +40,6 @@ public:
 private:
 
 };
-#endif // HOST_FDMS_HPP
+#endif // HOST_FDMS_H_
 
 

@@ -22,8 +22,8 @@
 
 #pragma once
 
-#ifndef HOST_GLOBAL_HPP
-#define HOST_GLOBAL_HPP
+#ifndef HOST_GLOBAL_H_
+#define HOST_GLOBAL_H_
 
 #include <iostream>
 #include <vector>
@@ -40,6 +40,6 @@ public:
 private:
 
 };
-#endif // HOST_GLOBAL_HPP
+#endif // HOST_GLOBAL_H_
 
 

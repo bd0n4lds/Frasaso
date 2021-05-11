@@ -20,6 +20,16 @@
  *
  */
 
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <errno.h>
+#include <time.h>
+#include <direct.h> 
 #include <fstream>
 #include <iostream>
 #include <stdio.h>
@@ -181,3 +191,21 @@ FILE* FileMng::openFile(char* FileName, int mode)
 /// 
 
 int FileMng::closeFile(FILE *hf) { return fclose(hf); }
+
+/// <summary>
+///
+/// </summary>
+/// 
+
+int FileMng::GetWorkDir(char* WorkDir)
+{
+    _getcwd(WorkDir, 256);
+#ifndef WINUX_DEV
+    if (WorkDir[strlen(WorkDir) - 1] != '/')
+        strcat(WorkDir, "/");
+#else  //#ifndef WINUX_DEV
+    if (WorkDir[strlen(WorkDir) - 1] != '\\')
+        strcat(WorkDir, "\\");
+#endif //#ifndef WINUX_DEV
+    return 1;
+}

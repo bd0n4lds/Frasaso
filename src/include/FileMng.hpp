@@ -22,8 +22,8 @@
 
 #pragma once
 
-#ifndef FILEMNG_HPP
-#define FILEMNG_HPP
+#ifndef FILEMNG_H_
+#define FILEMNG_H_
 
 #include <fstream>
 #include <iostream>
@@ -47,8 +47,9 @@ public:
   char *getExtension(char *fileName, char *ext);
   FILE *openFile(char *FileName, int mode);
   int closeFile(FILE* hf);
+  int GetWorkDir(char* WorkDir);
 
 private:
 
 };
-#endif // FILEMNG_HPP
+#endif // FILEMNG_H_

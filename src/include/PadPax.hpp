@@ -22,8 +22,8 @@
 
 #pragma once
 
-#ifndef PAD_PAX_HPP
-#define PAD_PAX_HPP
+#ifndef PAD_PAX_H_
+#define PAD_PAX_H_
 
 #include <iostream>
 #include <vector>
@@ -40,4 +40,4 @@ public:
 private:
 
 };
-#endif // PAD_PAX_HPP
+#endif // PAD_PAX_H_
